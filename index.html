@@ -1,95 +1,264 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hasibur Rahman — Personal Portfolio">
-<title>Hasibur Rahman — Personal Space</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-:root{--bg:#03130e;--card:rgba(255,255,255,.035);--text:#f5f8f6;--muted:#9caea6;--green:#19dc8a;--line:rgba(25,220,138,.18)}
-body{font-family:Inter,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 15%,rgba(25,220,138,.14),transparent 28%),radial-gradient(circle at 10% 80%,rgba(25,220,138,.07),transparent 25%);z-index:-1}
-header{position:sticky;top:0;z-index:100;background:rgba(3,19,14,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
-.nav{max-width:1160px;margin:auto;padding:17px 28px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:30px;font-weight:800;letter-spacing:-1.5px}.logo span{color:var(--green)}
-.desktop-nav{display:flex;align-items:center;gap:30px}
-.desktop-nav a{color:#dce7e2;text-decoration:none;font-size:16px;transition:.25s}
-.desktop-nav a:hover{color:var(--green)}
-.menu-btn{display:none;background:transparent;border:1px solid rgba(255,255,255,.15);color:#fff;border-radius:12px;width:45px;height:42px;font-size:22px;cursor:pointer}
-.mobile-nav{display:none;max-width:1160px;margin:auto;padding:0 20px 18px}
-.mobile-nav a{display:block;text-decoration:none;color:#e9f1ed;padding:13px 15px;border-radius:12px}
-.mobile-nav a:hover{background:rgba(25,220,138,.08);color:var(--green)}
-.hero{min-height:calc(100vh - 78px);display:flex;align-items:center}
-.wrap{max-width:1160px;margin:auto;padding:85px 28px;width:100%}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:9px 18px;color:#7ef0bd;background:rgba(25,220,138,.035);font-size:14px;margin-bottom:30px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
-h1{font-size:clamp(52px,9vw,94px);line-height:.98;letter-spacing:-4px;max-width:850px;margin-bottom:30px}
-h1 span{color:var(--green)}
-.tagline{font-size:clamp(19px,2.3vw,27px);font-weight:600;color:#dce8e2;max-width:720px;margin-bottom:10px}
-.intro{font-family:"Noto Sans Bengali",sans-serif;max-width:700px;font-size:19px;color:var(--muted);margin-bottom:38px}
-.buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:14px 27px;border-radius:999px;font-size:16px;font-weight:700;border:1px solid rgba(255,255,255,.18);color:#fff;transition:.25s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--green);color:#02140d;border-color:var(--green)}
-.profile{margin-top:48px;display:flex;align-items:center;gap:18px;padding:18px 20px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(120deg,rgba(255,255,255,.04),rgba(25,220,138,.025));max-width:540px}
-.avatar{width:68px;height:68px;flex:0 0 68px;border-radius:20px;display:grid;place-items:center;background:var(--green);color:#03130e;font-size:23px;font-weight:800}
-.profile strong{font-size:19px}.profile small{display:block;color:#81938b;margin-top:2px}
-section{max-width:1160px;margin:auto;padding:95px 28px}
-section h2{font-size:42px;letter-spacing:-1px;color:var(--green);margin-bottom:18px}
-.card{padding:28px;border:1px solid rgba(25,220,138,.14);border-radius:24px;background:var(--card);color:#b5c3bd}
-footer{text-align:center;padding:38px 20px;color:#70827a;border-top:1px solid rgba(255,255,255,.07)}
-@media(max-width:760px){
- .nav{padding:14px 18px}.desktop-nav{display:none}.menu-btn{display:block}
- .mobile-nav.open{display:block}
- .wrap{padding:62px 20px}.hero{min-height:calc(100vh - 70px)}
- h1{font-size:clamp(50px,15vw,72px);letter-spacing:-3px}
- .tagline{font-size:19px}.intro{font-size:17px}
- .buttons{flex-direction:column;align-items:stretch;max-width:330px}
- .btn{width:100%;padding:14px 20px}
- .profile{max-width:100%;padding:16px}
- section{padding:75px 20px}section h2{font-size:34px}
-}
-@media(min-width:761px){.mobile-nav{display:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#061711">
+  <meta name="description" content="Hasibur Rahman — Personal Website">
+  <title>Hasibur Rahman — Personal Website</title>
+  <style>
+    :root{
+      --bg:#061711;
+      --bg2:#081f17;
+      --panel:rgba(11,39,29,.62);
+      --line:rgba(69,255,182,.16);
+      --text:#f4faf7;
+      --muted:#a4b7af;
+      --accent:#18df8d;
+      --accent2:#83ffd0;
+      --shadow:0 25px 80px rgba(0,0,0,.28);
+      --radius:26px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Bengali",sans-serif;
+      color:var(--text);background:
+      radial-gradient(circle at 85% 15%,rgba(24,223,141,.13),transparent 28%),
+      radial-gradient(circle at 10% 45%,rgba(18,120,85,.10),transparent 30%),
+      var(--bg);
+      line-height:1.6;overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:100;
+      background:rgba(4,18,13,.78);backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav-inner{height:82px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:31px;font-weight:850;letter-spacing:-1.5px}
+    .brand span{color:var(--accent)}
+    .links{display:flex;gap:8px;align-items:center}
+    .links a{
+      padding:11px 14px;color:#d7e3df;border-radius:12px;font-weight:600;
+      transition:.25s;
+    }
+    .links a:hover{background:rgba(255,255,255,.06);color:white}
+    .menu-btn{
+      width:48px;height:48px;border:1px solid var(--line);border-radius:15px;
+      background:rgba(255,255,255,.025);color:white;display:none;
+      align-items:center;justify-content:center;cursor:pointer;
+    }
+    .menu-btn svg{width:24px;height:24px}
+    .mobile-menu{
+      position:fixed;inset:82px 16px auto 16px;z-index:99;
+      background:rgba(5,25,18,.98);border:1px solid var(--line);
+      border-radius:22px;padding:12px;box-shadow:var(--shadow);
+      opacity:0;transform:translateY(-12px);pointer-events:none;transition:.25s;
+    }
+    .mobile-menu.open{opacity:1;transform:none;pointer-events:auto}
+    .mobile-menu a{display:block;padding:15px 16px;border-radius:14px;font-weight:700}
+    .mobile-menu a:hover{background:rgba(24,223,141,.09);color:var(--accent2)}
+    .hero{min-height:calc(100vh - 82px);display:grid;place-items:center;padding:80px 0 90px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .eyebrow{
+      display:inline-flex;gap:10px;align-items:center;border:1px solid var(--line);
+      color:var(--accent2);padding:8px 13px;border-radius:999px;font-weight:700;
+      background:rgba(24,223,141,.04);margin-bottom:22px;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 18px var(--accent)}
+    h1{font-size:clamp(58px,8vw,102px);line-height:.93;letter-spacing:-5px;font-weight:900}
+    h1 .green{color:var(--accent)}
+    .tagline{font-size:clamp(22px,3vw,34px);font-weight:750;line-height:1.2;margin:30px 0 18px;max-width:650px}
+    .desc{font-size:18px;color:var(--muted);max-width:620px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+    .btn{
+      min-height:56px;padding:0 25px;border-radius:999px;display:inline-flex;
+      align-items:center;justify-content:center;font-weight:800;border:1px solid var(--line);
+      transition:.25s;cursor:pointer;
+    }
+    .btn.primary{background:var(--accent);color:#042017;border-color:var(--accent)}
+    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px rgba(24,223,141,.18)}
+    .btn.ghost:hover{background:rgba(255,255,255,.05)}
+    .profile-card{
+      position:relative;border:1px solid var(--line);border-radius:34px;
+      padding:30px;background:linear-gradient(145deg,rgba(24,223,141,.08),rgba(255,255,255,.015));
+      box-shadow:var(--shadow);overflow:hidden;
+    }
+    .profile-card:before{
+      content:"";position:absolute;width:210px;height:210px;border-radius:50%;
+      background:rgba(24,223,141,.12);filter:blur(25px);right:-80px;top:-90px;
+    }
+    .avatar{width:100px;height:100px;border-radius:28px;background:var(--accent);color:#042017;
+      display:grid;place-items:center;font-size:36px;font-weight:900;margin-bottom:32px}
+    .card-title{font-size:28px;font-weight:850}
+    .card-sub{color:var(--muted);margin-top:5px}
+    .card-line{height:1px;background:var(--line);margin:28px 0}
+    .mini{display:flex;justify-content:space-between;color:var(--muted);font-size:14px}
+    section{padding:100px 0}
+    .section-label{color:var(--accent);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+    h2{font-size:clamp(38px,5vw,64px);line-height:1;letter-spacing:-2px;margin:12px 0 20px}
+    .section-intro{color:var(--muted);max-width:650px;font-size:18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+    .tile{
+      border:1px solid var(--line);border-radius:24px;padding:28px;
+      background:rgba(255,255,255,.018);min-height:210px;transition:.3s;
+    }
+    .tile:hover{transform:translateY(-5px);border-color:rgba(69,255,182,.34);background:rgba(24,223,141,.04)}
+    .num{font-size:13px;color:var(--accent);font-weight:900}
+    .tile h3{font-size:24px;margin:35px 0 8px}
+    .tile p{color:var(--muted)}
+    .quote{
+      border-left:2px solid var(--accent);padding:5px 0 5px 22px;
+      font-size:clamp(26px,4vw,44px);line-height:1.2;font-weight:800;max-width:850px;
+    }
+    footer{padding:35px 0 50px;border-top:1px solid rgba(255,255,255,.06);color:var(--muted)}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(20px);transition:.7s ease}
+    .reveal.show{opacity:1;transform:none}
+    @media(max-width:850px){
+      .links{display:none}.menu-btn{display:flex}
+      .hero{padding:60px 0 70px;min-height:auto}
+      .hero-grid{grid-template-columns:1fr;gap:42px}
+      h1{font-size:clamp(56px,16vw,82px);letter-spacing:-4px}
+      .profile-card{max-width:620px}
+      .grid{grid-template-columns:1fr}
+      section{padding:75px 0}
+    }
+    @media(max-width:520px){
+      .container{width:min(calc(100% - 28px),var(--max))}
+      .nav-inner{height:72px}.mobile-menu{inset:72px 12px auto 12px}
+      .hero{padding-top:45px}
+      h1{font-size:58px;letter-spacing:-3px}
+      .tagline{font-size:24px}
+      .desc{font-size:16px}
+      .actions{display:grid;grid-template-columns:1fr}
+      .btn{width:100%}
+      .profile-card{padding:24px;border-radius:26px}
+      .avatar{width:82px;height:82px;border-radius:23px;font-size:30px}
+      .card-title{font-size:24px}
+    }
+  </style>
 </head>
 <body>
-<header>
-<div class="nav">
-<div class="logo">Hasibur<span>.</span></div>
-<nav class="desktop-nav">
-<a href="#home">Home</a><a href="#about">About</a><a href="#interests">Interests</a><a href="#social">Social</a><a href="#contact">Contact</a>
-</nav>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
-</div>
-<nav class="mobile-nav" id="mobileNav">
-<a href="#home">Home</a><a href="#about">About</a><a href="#interests">Interests</a><a href="#social">Social</a><a href="#contact">Contact</a>
-</nav>
-</header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Hasibur<span>.</span></a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#interests">Interests</a><a href="#social">Social</a><a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </header>
 
-<main>
-<section class="hero" id="home"><div class="wrap">
-<div class="eyebrow"><span class="dot"></span> Welcome to my personal space</div>
-<h1>I'm <span>Hasibur<br>Rahman</span></h1>
-<p class="tagline">Quietly building. Constantly becoming.</p>
-<p class="intro">স্বপ্ন দেখি, শিখি এবং নিজের পথে সামনে এগিয়ে চলি। নিজের পরিচয়কে কথায় নয়, কাজের মাধ্যমে তৈরি করাই আমার লক্ষ্য।</p>
-<div class="buttons"><a class="btn primary" href="#about">Explore More ↗</a><a class="btn" href="#contact">Contact Me</a></div>
-<div class="profile"><div class="avatar">HR</div><div><strong>Hasibur Rahman</strong><small>Personal Website • 2026</small></div></div>
-</div></section>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#interests">Interests</a><a href="#social">Social</a><a href="#contact">Contact</a>
+  </div>
 
-<section id="about"><h2>About</h2><div class="card">আমি হাসিবুর রহমান। শেখা, সৃজনশীলতা এবং নিজের লক্ষ্যকে সামনে রেখে ধীরে ধীরে নিজের পথ তৈরি করছি।</div></section>
-<section id="interests"><h2>Interests</h2><div class="card">Technology • Creativity • Lifestyle • Learning</div></section>
-<section id="social"><h2>Social</h2><div class="card">আমার সোশ্যাল প্রোফাইলের লিংকগুলো এখানে যোগ করা যাবে।</div></section>
-<section id="contact"><h2>Contact</h2><div class="card">যোগাযোগের তথ্য এখানে যোগ করা যাবে।</div></section>
-</main>
-<footer>© 2026 Hasibur Rahman • Built with purpose.</footer>
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow"><i class="dot"></i> Welcome to my personal space</div>
+          <h1>I'm <span class="green">Hasibur<br>Rahman</span></h1>
+          <p class="tagline">Quietly building. Constantly becoming.</p>
+          <p class="desc">স্বপ্ন দেখি, শিখি এবং নিজের পথে সামনে এগিয়ে চলি। নিজের পরিচয়কে কথায় নয়, কাজের মাধ্যমে তৈরি করাই আমার লক্ষ্য।</p>
+          <div class="actions">
+            <a class="btn primary" href="#about">Explore More ↗</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <aside class="profile-card reveal">
+          <div class="avatar">HR</div>
+          <div class="card-title">Hasibur Rahman</div>
+          <div class="card-sub">Personal Website · 2026</div>
+          <div class="card-line"></div>
+          <div class="mini"><span>STATUS</span><strong style="color:var(--accent)">BUILDING</strong></div>
+          <div class="mini" style="margin-top:12px"><span>VIBE</span><strong>CALM / FOCUSED</strong></div>
+        </aside>
+      </div>
+    </section>
 
-<script>
-const btn=document.getElementById('menuBtn'), nav=document.getElementById('mobileNav');
-btn.addEventListener('click',()=>{nav.classList.toggle('open');btn.textContent=nav.classList.contains('open')?'✕':'☰'});
-document.querySelectorAll('.mobile-nav a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.textContent='☰'}));
-</script>
+    <section id="about">
+      <div class="container reveal">
+        <div class="section-label">01 — About</div>
+        <h2>Less noise.<br>More purpose.</h2>
+        <p class="section-intro">আমি বিশ্বাস করি, ধীরে এগোলেও ধারাবাহিকভাবে এগিয়ে যাওয়া সবচেয়ে শক্তিশালী অভ্যাস। এই জায়গাটি আমার কাজ, ভাবনা এবং ভবিষ্যৎ পরিকল্পনার একটি ছোট্ট ডিজিটাল স্পেস।</p>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">02 — Interests</div>
+          <h2>Things I enjoy.</h2>
+          <p class="section-intro">Curiosity keeps the journey interesting.</p>
+        </div>
+        <div class="grid">
+          <article class="tile reveal"><div class="num">01</div><h3>Creative</h3><p>নতুন আইডিয়া, ডিজাইন এবং নিজের মতো করে কিছু তৈরি করা।</p></article>
+          <article class="tile reveal"><div class="num">02</div><h3>Learning</h3><p>প্রতিদিন ছোট কিছু শেখা এবং আগের চেয়ে ভালো হওয়ার চেষ্টা।</p></article>
+          <article class="tile reveal"><div class="num">03</div><h3>Digital</h3><p>ওয়েব, প্রযুক্তি এবং ডিজিটাল জগতের নতুন জিনিস নিয়ে কাজ করা।</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="social">
+      <div class="container reveal">
+        <div class="section-label">03 — Mindset</div>
+        <div class="quote">“Build quietly. Let the work make the introduction.”</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container reveal">
+        <div class="section-label">04 — Contact</div>
+        <h2>Let's connect.</h2>
+        <p class="section-intro">কথা বলতে বা কোনো আইডিয়া শেয়ার করতে চাইলে যোগাযোগ করতে পারেন।</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:your-email@example.com">Send Email ↗</a>
+          <a class="btn ghost" href="#home">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Hasibur Rahman</span>
+      <span>Built with intention.</span>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.innerHTML = open
+        ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>';
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
